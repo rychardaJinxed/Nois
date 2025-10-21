@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Você 💖</title>
+<style>
+  @font-face {
+    font-family: 'Fonte1';
+    src: url('imgs/Fonte1.otf') format('opentype');
+  }
+
+  body {
+    font-family: 'Fonte1';
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+  }
+
+  .section-top {
+    background: linear-gradient(135deg, #634bd7, #02010b);
+    padding-bottom: 50px;
+  }
+
+  .section-bottom {
+    background: linear-gradient(135deg, #000000, #963365);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  header {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 20px;
+  }
+
+  .gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin: 0;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery figcaption {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #222;
+    background: rgba(255,255,255,0.7);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .text-area {
+    background: rgba(255,255,255,0.85);
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 20px;
+    max-width: 700px;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  audio {
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  .float-item {
+    position: fixed;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    animation: float 6s linear infinite;
+    z-index: 9999;
+    opacity: 0.9;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+  }
+
+  button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    font-family: 'Fonte1';
+  }
+
+  button:hover {
+    background: #ffe3ec;
+    transform: scale(1.1);
+  }
+
+  /* Tela do vídeo em destaque */
+  #videoOverlay {
+    display: none; /* invisível até clicar */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #videoOverlay video {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.3);
+  }
+
+  #closeVideo {
+    margin-top: 20px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+  }
+
+  #closeVideo:hover {
+    background: #ffb6c1;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 🌌 PARTE 1 -->
+  <div class="section-top">
+    <header>
+      <h1>🦇 Beterrabinha 🦇</h1>
+    </header>
+
+    <div class="gallery">
+      <figure>
+        <img src="imgs/foto4.jpg" alt="Foto 1">
+      </figure>
+    </div>
+
+    <div class="music-player">
+      <button id="playMusic">Musiquinha pra voce 🖤</button>
+    </div>
+
+    <audio id="audioPlayer" src="imgs/musica.mp3" loop></audio>
+
+    <!-- ❌ REMOVIDO O IFRAME QUE ABRIA O VÍDEO SOZINHO -->
+  </div>
+
+  <!-- 💖 PARTE 2 -->
+  <div class="section-bottom">
+    <div class="text-area">
+      <h2>Minha Princesa</h2>
+      <p>
+        <!-- seu texto lindo aqui -->
+        Lethicia Você é a luz, você é a força, você é a esperança, você é a bondade, você é a atitude, você é à vontade<br> Você é o mundo, a vida, a galaxia, as estrelas<br> Você é tudo, o presente e o futuro, o ar que eu respiro, a esperança de viver, a vontade, o amor, o carinho, a paixão<br> Mas você também é a raiva, o ódio, a encheção de saco, e bom nao importa<br> Apenas entenda, você tudo pra mim, não importa o momento, o local, o dia ou a hora, não importa oque ta acontecendo entre a gente em tal hora ou nao, oque importa é que eu te amo!<br> Eu vou fazer você minha princesa, feliz, eu vou fazer você ser amada, desejada, se sentir segura, alegre, e não importa o momento, eu a todo momento irei me esforçar!!!<br> Eu vou te da tudo, eu vou te da o mundo, o sol e a lua, as galáxias, eu irei fazer o meu máximo pra poder te da tudo que vc desejar, eu vou te da amor e carinho, compreensão e abraços, vou te da seu espaço e seu tempo, eu vou te da tudo que eu puder para te fazer bem e feliz, porque vc é a mulher que eu amo e a mulher que eu quero casar!<br> Tivemos momentos bons e ruins, momentos muito divertidos e muito difíceis, e vamos ter momentos bons e ruins o resto da vida mesmo, mas vamos superar cada um, um por um e seguirmos juntos, vamos ficar juntos e superar TODOS, quando eu quiser desistir eu sei que você não vai deixar, e eu vou olhar pra você e seguir por nos, e eu irei fazer o mesmo por você, porque alem de um amor, eu sou seu amigo, seu companheiro da sua vida toda, seu ombro, seu apoio e seu homem, eu sou seu apenas seu!<br> Lethicia Gabrielly, eu te amo muito e você é tudo para mim, eu te amo, e eu amo tudo em você, cada detalhe, cada jeito, cada forma, amo seus olhos, seu sorriso, sua risada linda que faz meu coração ficar quentinho, seus cachos lindos e cheirosos, seu nariz lindinho, seu corpo maravilhoso, e tudo em você, eu amo você e apenas você! Eu te amo lethicia, eu te amo e eu te amo <br> Para <br> Sempre<br> 🖤<br>
+      </p>
+    </div>
+
+    <div class="gallery">
+      <figure><img src="imgs/foto1.jpg"><figcaption>Nois todo lindo trevas🦇</figcaption></figure>
+      <figure><img src="imgs/foto2.jpg"><figcaption>🖤</figcaption></figure>
+      <figure><img src="imgs/foto3.jpg"><figcaption>Você perfeita🖤</figcaption></figure>
+      <figure><img src="imgs/foto4.jpg"><figcaption>Juntos sempre🖤</figcaption></figure>
+      <figure><img src="imgs/foto5.jpg"><figcaption>🖤</figcaption></figure>
+      <figure><img src="imgs/foto6.jpg"><figcaption>EU FIQUEI MT FELIZ ESSE DIA</figcaption></figure>
+      <figure><img src="imgs/foto7.jpg"><figcaption>Meu amorzinho 💋</figcaption></figure>
+      <figure><img src="imgs/foto8.jpg"><figcaption>Um casal perfeito desse hehe</figcaption></figure>
+      <figure><img src="imgs/foto9.jpg"><figcaption>Um dos melhores dias com vc🖤</figcaption></figure>
+      <figure><img src="imgs/foto10.jpg"><figcaption>Te amo pra sempre 💘</figcaption></figure>
+      <figure><img src="imgs/foto11.jpg"><figcaption>O dia da minha melhor escolha 🖤</figcaption></figure>
+    </div>
+
+    <div style="margin: 30px;">
+      <button onclick="showVideo()">💗 Clique aqui se você me ama 💗</button>
+    </div>
+  </div>
+
+  <!-- 🎬 Vídeo que só aparece ao clicar -->
+  <div id="videoOverlay">
+    <video id="loveVideo" src="imgs/videoplayback.mp4" controls></video>
+    <button id="closeVideo">Fechar 💞</button>
+  </div>
+
+  <script>
+    // 🎵 Controle da música
+    const button = document.getElementById('playMusic');
+    const audio = document.getElementById('audioPlayer');
+    let playing = false;
+
+    button.addEventListener('click', () => {
+      if (!playing) {
+        audio.play();
+        button.innerText = '💞 Pausar música 💞';
+        playing = true;
+      } else {
+        audio.pause();
+        button.innerText = '💖 Tocar nossa música 💖';
+        playing = false;
+      }
+    });
+
+    // 🌸 Efeito flutuante
+    const floatImages = ["imgs/gato1.jpg", "imgs/cachorro1.jpg"];
+
+    function addFloatItem() {
+      const img = document.createElement('img');
+      img.classList.add('float-item');
+      img.src = floatImages[Math.floor(Math.random() * floatImages.length)];
+      img.style.left = Math.random() * 100 + 'vw';
+      img.style.animationDuration = 4 + Math.random() * 3 + 's';
+      img.style.width = 30 + Math.random() * 30 + 'px';
+      document.body.appendChild(img);
+      setTimeout(() => img.remove(), 6000);
+    }
+    setInterval(addFloatItem, 1000);
+
+    // 🎬 Mostrar vídeo grande
+    function showVideo() {
+      const overlay = document.getElementById('videoOverlay');
+      const video = document.getElementById('loveVideo');
+      overlay.style.display = 'flex';
+      video.currentTime = 0;
+      video.play();
+    }
+
+    // ❌ Fechar vídeo
+    document.getElementById('closeVideo').addEventListener('click', () => {
+      const overlay = document.getElementById('videoOverlay');
+      const video = document.getElementById('loveVideo');
+      video.pause();
+      overlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
